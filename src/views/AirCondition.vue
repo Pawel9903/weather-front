@@ -21,7 +21,7 @@
         stationIds: number[] = []
         stations: Station[] = []
         get stationFilter(): object {
-            return this.stationIds
+            return { filter: {id: this.stationIds} }
         }
         @Watch('stationIds') onStationIdsChanged(val: number[], nevVal: number[]): void {
             this.getStations()

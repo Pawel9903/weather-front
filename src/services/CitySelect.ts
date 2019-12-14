@@ -5,7 +5,7 @@ import {Select} from "@/models/Select";
 
 @Module({
     namespaced: true,
-    name: 'citySelect',
+    name: 'citySelectModule',
     dynamic: true,
     store
 })

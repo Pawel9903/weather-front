@@ -2,6 +2,7 @@ import {VuexModule, Module, getModule, Action, Mutation} from "vuex-module-decor
 import store from '@/store'
 import {Api} from "@/store/api";
 import {Station} from "@/models/Station";
+const qs = require('qs');
 
 @Module({
     namespaced: true,
@@ -13,11 +14,9 @@ import {Station} from "@/models/Station";
 class StationModule extends VuexModule {
     @Action
     async loadStation(filter: object = {}): Promise<Station[]> {
-        return await Api.get('/stations/', {
-            params: filter,
-            paramsSerializer: params => {
+        return await Api.get('/stations/', {params: filter, paramsSerializer: params => {
                 return qs.stringify(params)
-            } }).then(({ data }) => data.data) as Station[]
+            }}).then(({ data }) => data.data) as Station[]
     }
 }
 
