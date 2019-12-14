@@ -1,13 +1,12 @@
 <template>
     <div>
         <jumbotron />
-        {{ select }}
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Vue} from "vue-property-decorator";
-    import Jumbotron from "@/components/Jumbotron";
+    import Jumbotron from "@/components/Jumbotron.vue";
 
     @Component({
         components: {Jumbotron}

@@ -19,7 +19,7 @@
         })
         header?: string
         @Prop({
-            default: 'Platform providing weather news.'
+            default: 'Platform providing weather news. Select options from the top menu.'
         })
         text?: string
     }
@@ -28,5 +28,6 @@
 <style lang="scss" scoped>
     .jumbotron {
         border-radius: unset;
+        margin-bottom: 100px;
     }
 </style>

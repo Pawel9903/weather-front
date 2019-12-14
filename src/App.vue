@@ -2,18 +2,18 @@
   <div>
     <nav-bar />
     <router-view />
+    <footer-app />
   </div>
 </template>
 
-<style lang="scss">
-
-</style>
 <script lang="ts">
   import NavBar from "@/components/NavBar.vue";
   import { Vue, Component } from 'vue-property-decorator'
+  import FooterApp from "@/components/FooterApp.vue";
 
   @Component({
     components: {
+      FooterApp,
       NavBar
     }
   })
@@ -21,3 +21,7 @@
 
   }
 </script>
+
+<style lang="scss">
+
+</style>
