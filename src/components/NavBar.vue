@@ -1,6 +1,7 @@
 <template>
     <div>
         <b-navbar type="dark" variant="success">
+            <b-navbar-brand href="#">Weather</b-navbar-brand>
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
                     <b-nav-item :active="routerName === 'home'" href="/">Home</b-nav-item>
