@@ -1,7 +1,9 @@
 <template>
   <div>
     <nav-bar />
-    <router-view />
+    <div class="app-content">
+      <router-view />
+    </div>
     <footer-app />
   </div>
 </template>
@@ -23,5 +25,7 @@
 </script>
 
 <style lang="scss">
-
+  .app-content {
+    min-height: 65vh;
+  }
 </style>
