@@ -9,13 +9,19 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
     import { Component, Vue, Prop } from "vue-property-decorator"
 
     @Component
     export default class Jumbotron extends Vue {
-        @Prop() header: string = 'Weather';
-        @Prop() text: string = 'Platform providing weather news.'
+        @Prop({
+            default: 'Weather'
+        })
+        header?: string
+        @Prop({
+            default: 'Platform providing weather news.'
+        })
+        text?: string
     }
 </script>
 
