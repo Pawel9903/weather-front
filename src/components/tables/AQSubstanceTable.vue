@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Air condition</h3>
+        <h3>Air quality</h3>
         <b-table :items="items" :fields="fields">
             <template v-slot:cell(substance)="{ item }">
                 {{ item.name }}
