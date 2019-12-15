@@ -9,6 +9,7 @@
 
 ```sh
 npm install
+npm run serve
 ```
 
 ## Author
@@ -17,11 +18,7 @@ npm install
 
 * Website: http://pawelged.pl
 * Github: [@Pawel9903](https://github.com/Pawel9903)
-* LinkedIn: [@Paweł Ged](https://linkedin.com/in/Paweł Ged)
+* LinkedIn: [@Paweł Ged](https://linkedin.com/in/paweł-ged-26038a15a/)
 
 ## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+!
