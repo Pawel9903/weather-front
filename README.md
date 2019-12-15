@@ -7,6 +7,8 @@
 
 [Link to API repository](https://github.com/Pawel9903/weather-api)
 
+![Screenshot](screenshot.png)
+
 ## Install
 
 ```sh
