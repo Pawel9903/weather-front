@@ -5,7 +5,7 @@
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
                     <b-nav-item :active="routerName === 'home'" href="/">Home</b-nav-item>
-                    <b-nav-item :active="routerName === 'airCondition'" href="air-condition">Air Condition</b-nav-item>
+                    <b-nav-item :active="routerName === 'airQuality'" href="air-quality">Air Quality</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>

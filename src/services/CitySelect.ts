@@ -2,6 +2,7 @@ import {VuexModule, Module, getModule, Action, Mutation} from "vuex-module-decor
 import store from '@/store'
 import {Api} from "@/store/api";
 import {Select} from "@/models/Select";
+import {CitySelectService} from "@/models/City";
 
 @Module({
     namespaced: true,
@@ -10,7 +11,7 @@ import {Select} from "@/models/Select";
     store
 })
 
-class CitySelectModule extends VuexModule {
+class CitySelectModule extends VuexModule implements CitySelectService {
     @Action
     async loadCitySelect(): Promise<Select[]> {
         return await Api.get('/stations/select/').then(({ data }) => data.data) as Select[]

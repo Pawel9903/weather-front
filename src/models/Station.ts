@@ -8,3 +8,7 @@ export interface Station {
     coords: GeoJson
     city: City
 }
+
+export interface StationService {
+    loadStation(filter: object): Promise<Station[]>
+}
