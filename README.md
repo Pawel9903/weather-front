@@ -4,6 +4,7 @@
 </p>
 
 > Platform providing weather air quality information.
+> [Link to API repository]https://github.com/Pawel9903/weather-api)
 
 ## Install
 
