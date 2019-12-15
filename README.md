@@ -9,7 +9,6 @@
 
 ```sh
 npm install
-npm run serve
 ```
 
 ## Author
@@ -19,6 +18,3 @@ npm run serve
 * Website: http://pawelged.pl
 * Github: [@Pawel9903](https://github.com/Pawel9903)
 * LinkedIn: [@Paweł Ged](https://linkedin.com/in/paweł-ged-26038a15a/)
-
-## Show your support
-!
