@@ -18,16 +18,17 @@
 </template>
 
 <script lang="ts">
-    import {Component, PropSync, Vue} from "vue-property-decorator";
-    import CitySelectModule from "@/services/CitySelect";
+    import {Component, Inject, PropSync, Vue} from "vue-property-decorator";
     import {Select} from "@/models/Select";
+    import {CitySelectService} from "@/models/City";
 
     @Component
-    export default class CitySelect extends Vue{
+    export default class CitySelect extends Vue {
+        @Inject() readonly citySelectService!: CitySelectService
         options : Select[] = []
         @PropSync('value', { type: Array }) syncedValue!: number[]
         created(): void {
-            CitySelectModule.loadCitySelect().then(response => { this.options = response });
+            this.citySelectService.loadCitySelect().then(response => this.options = response);
         }
     }
 </script>

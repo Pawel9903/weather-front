@@ -1,7 +1,10 @@
 <template>
     <div>
-        <jumbotron header="Air Condition" text="The panel allows you to choose a city and see the air quality on a given day." />
+        <jumbotron header="Air quality" text="The panel allows you to choose a city and see the air quality on a given day." />
         <div class="container" >
+            <div class="text-center">
+                <h2>Choose a city to display stations.</h2>
+            </div>
             <city-select :value="stationIds" @update:value="stationIds = $event" />
             <station-table :items="stations" />
         </div>
@@ -9,17 +12,17 @@
 </template>
 
 <script lang="ts">
-    import {Component, Vue, Watch} from 'vue-property-decorator'
+    import {Component, Inject, Vue, Watch} from 'vue-property-decorator'
     import Jumbotron from "@/components/Jumbotron.vue";
     import CitySelect from "@/components/fields/CitySelect.vue";
-    import {Station} from "@/models/Station";
-    import StationModule from "@/services/Station";
+    import {Station, StationService} from "@/models/Station";
     import StationTable from "@/components/tables/StationTable.vue";
 
     @Component({
         components: {CitySelect, Jumbotron, StationTable}
     })
-    export default class AirCondition extends Vue{
+    export default class AirQuality extends Vue{
+        @Inject() readonly stationService!: StationService
         stationIds: number[] = []
         stations: Station[] = []
         get stationFilter(): object {
@@ -29,7 +32,7 @@
             this.getStations()
         }
         getStations(): void {
-            StationModule.loadStation(this.stationFilter).then(response => { this.stations = Object.values(response) });
+            this.stationService.loadStation(this.stationFilter).then(response => { this.stations = Object.values(response) });
         }
     }
 </script>

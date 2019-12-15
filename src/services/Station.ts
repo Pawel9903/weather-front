@@ -1,17 +1,17 @@
-import {VuexModule, Module, getModule, Action, Mutation} from "vuex-module-decorators";
+import {VuexModule, Module, getModule, Action} from "vuex-module-decorators";
 import store from '@/store'
 import {Api} from "@/store/api";
-import {Station} from "@/models/Station";
+import {Station, StationService} from "@/models/Station";
 const qs = require('qs');
 
 @Module({
     namespaced: true,
-    name: 'citySelect',
+    name: 'StationModule',
     dynamic: true,
     store
 })
 
-class StationModule extends VuexModule {
+class StationModule extends VuexModule implements StationService{
     @Action
     async loadStation(filter: object = {}): Promise<Station[]> {
         return await Api.get('/stations/', {params: filter, paramsSerializer: params => {
