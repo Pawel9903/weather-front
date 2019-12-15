@@ -12,7 +12,7 @@
                 {{ item.city.commune.province }}
             </template>
             <template v-slot:cell(options)="{ item }">
-                <air-quality-modal :station-id="item.id" />
+                <air-quality-modal :station-id="item.id" :station-name="item.name" />
             </template>
             <template v-if="!items.length" v-slot:table-caption>No Results.</template>
         </b-table>

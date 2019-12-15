@@ -28,7 +28,7 @@
         options : Select[] = []
         @PropSync('value', { type: Array }) syncedValue!: number[]
         created(): void {
-            this.citySelectService.loadCitySelect().then(response => { this.options = response });
+            this.citySelectService.loadCitySelect().then(response => this.options = response);
         }
     }
 </script>

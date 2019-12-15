@@ -1,4 +1,4 @@
-import {VuexModule, Module, getModule, Action, Mutation} from "vuex-module-decorators";
+import {VuexModule, Module, getModule, Action} from "vuex-module-decorators";
 import store from '@/store'
 import {Api} from "@/store/api";
 import {Station, StationService} from "@/models/Station";
@@ -6,7 +6,7 @@ const qs = require('qs');
 
 @Module({
     namespaced: true,
-    name: 'citySelect',
+    name: 'StationModule',
     dynamic: true,
     store
 })
