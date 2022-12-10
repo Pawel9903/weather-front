@@ -19,7 +19,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.5.0",
-    "qs": "^6.9.1",
+    "qs": "^6.9.7",
     "register-service-worker": "^1.6.2",
     "tslint": "^5.20.1",
     "vue": "^2.6.11",
